@@ -1,0 +1,165 @@
+*{
+    box-sizing: border-box;
+}
+:root{
+    --font-size: 1rem;
+    --font-weight: 400;
+    --line-height: 1.5;
+    --body-bg: #F7ECDE;
+}
+body{
+    font-family: "PT Sans Caption", sans-serif;
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
+    line-height: var(--line-height);
+    background-color: var(--body-bg);
+
+}
+::selection {
+    background-color: #fec260;
+    color: #352e28;
+}
+
+main .text{
+    font-size: 50px;
+    font-family: "Pacifico", cursive;
+    color: #352e28;
+    position: relative;
+    
+}
+.text::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 25%;
+    left: 0px;
+    bottom: 10px;
+    background-color: rgb(254, 194, 96);
+    z-index: -1;
+    transition: all 350ms ease 0s;
+}
+.text:hover::after{
+    content: "";
+    height: 50%;
+}
+
+.border-{
+    border-width: 2px 0 2px 0;
+    border-style: dotted;
+    border-color: #352e28;
+}
+
+main h2{
+    font-family: "Righteous", sans-serif;
+    font-size: 25px;
+    background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 0;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+.form-control:focus {
+    border-color: #d99c39;
+    box-shadow: 0 0 0 0.25rem #fec26055;
+}
+.btn{
+ background-color: #d1512d;
+ border-color: #d1512d; 
+ color: #fff;
+}
+.btn:hover{
+    background-color: #bb4120;
+    border-color: #a03315;
+    color: #fff;
+}
+td .btn1{
+    color: #fff;
+    background-color: #9eb23b;
+    border-color: #9eb23b;  
+}
+td .btn1:hover{
+    background-color: #8a9e23;
+    color: #fff;
+    border-color: #6e8018;;
+}
+td .btn2{
+    background-color: #eb1d36;
+    color: #fff;
+    border-color: #eb1d36;
+}
+td .btn2:hover{
+    background-color: #d30820;
+    color: #fff;
+    border-color: #ba081d;
+}
+#border{
+    width: 50px;
+    height: 50px;
+    border-radius: 5%;
+    background-color: green;
+}
+.circles span{
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+.circles span:nth-child(1){
+    background-color: #f15f5d;
+}
+.circles span:nth-child(2){
+    background-color: #febe2e;
+}
+.circles span:nth-child(3){
+    background-color: #4db748;
+}
+.paragraph{
+    font-family: "Bree Serif", serif;
+    font-size: 21px;
+    line-height: 1.3;
+    color: #352e28;
+}
+.fa-regular{
+  color:   #bb4120;
+  font-weight: 400;
+}
+.list{
+    font-size: 18px;
+    padding-top: 10px;
+}
+.modal{
+    --bs-modal-header-border-color: transparent;
+}
+.modal-header {
+    padding: 0;
+    padding-top: 3%;
+    padding-bottom: 4%;
+}
+
+
+.w-5{
+    width: 20px;
+    top: 47.5%;
+    left: 89%;
+}
+.w-6{
+    width: 20px;
+    top: 62%;
+    left: 89%;
+}
+.fade{
+    transition: none;
+}
+.modal.fade .modal-dialog{
+    transition: none;
+}
+.btn-close{
+    opacity:1;
+}
+.modal-dialog{
+    cursor: pointer;
+}
+.modal-header .btn-close {
+    padding-right:9%;
+}

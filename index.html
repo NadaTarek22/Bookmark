@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookmark</title>
+  <link rel="shortcut icon" href="imgs/bookmark.png" type="image/x-icon">
+  <link rel="stylesheet" href="CSS/all.min.css">
+  <link rel="stylesheet" href="CSS/bootstrap.min.css">
+  <link rel="stylesheet" href="CSS/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <main class="py-5">
+    <div class="container ">
+
+      <div class=" text-center d-flex justify-content-center align-items-center">
+        <h1 class="py-2 text">Bookmarker</h1>
+      </div>
+      <div class="w-100 py-4 p-3 gap-4 d-flex flex-column border- mt-5 ">
+        <div class="d-flex  justify-content-center align-items-center">
+          <h2>
+            <i class="fa-solid fa-bookmark"></i>
+            Bookmark your favorite sites
+            <i class="fa-solid fa-bookmark"></i>
+          </h2>
+        </div>
+        <div>
+          <i class="fa-solid fa-book-bookmark pe-2"></i>
+          <label for="siteName" class="fw-semibold pb-2">Site Name</label>
+          <input onkeyup="validateSiteName()" id="siteName" class="position-relative form-control" type="text" placeholder="Bookmark Name" required>
+          <div id="invalidImg" ></div>
+          <div id="validImg"></div>
+        </div>
+        <div>
+          <i class="fa-solid fa-link pe-2"></i>
+          <label for="siteURL" class="fw-semibold pb-2">Site URL</label>
+          <input onkeyup="validateUrl()" id="siteURL" class="form-control position-relative"  type="text" placeholder="Website URL">
+          <div id="invalidImg2" ></div>
+          <div id="validImg2"></div>
+        </div>
+        <div  class="d-flex justify-content-center align-items-center">
+          <button class="btn px-5 submitBtn" >Submit</button>
+          <div class=" modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class=" box-conent bg-white p-4 rounded-2 shadow-lg">
+                <div class="modal-header">
+                  <div class="circles d-flex">
+                    <span class="rounded-circle me-2"></span>
+                    <span class="rounded-circle me-2"></span>
+                    <span class="rounded-circle me-2"></span>
+
+                  </div>
+                  <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div >
+                <p class="m-0 pb-2 pt-3  paragraph">Site Name or Url is not valid, Please follow the rules below :</p>
+                <ol class="list-unstyled">
+                  <li class="list">
+                    <i class="fa-regular fa-circle-right p-2"></i>
+                    Site name must contain at least 3 characters
+                  </li>
+                  <li class="list">
+                    <i class="fa-regular fa-circle-right p-2"></i>
+                    Site URL must be a valid one
+                  </li>
+                </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <table  class="table text-center mt-4 bg-light">
+          <thead>
+            <tr>
+              <th>Index</th>
+              <th>Website Name</th>
+              <th>Visit</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+<script src="JS/main.js"></script>
+<script src="JS/bootstrap.bundle.min.js"></script>
+</body>
+</html>
